@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css || Classess</title>
+</head>
+<body>
+    <h3>Css_classes</h3>
+    <p>just ways of handling css class and selectors </p>
+    <li>Css Combinators</li>
+    <li>Css Pseudo-class</li>
+    <li>Css Pseudo-elements</li>
+
+    <h3>Css Combinators</h3>
+    <p>A combinator is something that explains the relationship between the selectors</p>
+    <p><strong>This css selectors can contain more than one samples selector</strong></p>
+    <p>Four types of combinators</p>
+    <li>Descendant selector (space)</li>
+    <li>child selector (>) </li>
+    <li>Adjacent sibling selector (+)</li>
+    <li>General sibling selector (~) </li>
+
+    <h3>Descendant selector it matches all elements that are Descendant of a specified element</h3>
+    <div class="Des">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, maiores.</p>
+        <li><p>Lorem ipsum dolor sit amet.</p></li>
+        <a href="">Lorem, ipsum.</a>
+    </div>
+
+    <style>
+        .Des p
+        {
+            color: red;
+        }
+    </style>
+
+    <h3>Child Selectors</h3>
+    <p>it selects all element that are the children of a specified element</p>
+
+    <div class="Chd">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <div><p> Div section Lorem ipsum dolor sit amet consectetur.</p></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+    </div>
+
+    <style>
+        .Chd > div
+        {
+            color: green;
+        }
+    </style>
+
+    <h3>Adjacent Sibling Selectors</h3>
+    <p>it is used to select an element that is directly after another specific element</p>
+    <p>The sibling elements must have the same parent element, "adjacent" means "immediately following"</p>
+
+    <div class="Adj">
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+        
+    </div>
+
+    <style>
+        .Adj div + p
+        {
+            background-color: tomato;
+
+        }
+    </style>
+
+<h3>General sibling selector (~)</h3>
+<p>it selects all elements that are sibling of a specified element</p>
+<div class="Gen">
+    <p>Lorem ipsum dolor sit amet. 1</p>
+    <div>
+        <p>Lorem ipsum dolor consectetur. 2</p>
+    </div>
+    <p>Lorem ipsum dolor sit. 3</p>
+    <code>Lorem ipsum dolor sit. 4</code>
+    <p>Lorem, ipsum dolor. 5</p>
+</div>
+
+<style>
+    .Gen div ~ p
+    {
+        background-color: red;
+    }
+</style>
+
+<h3>Css Pseudo-Class (:)</h3>
+<p>This is used to define a special state of an element </p>
+<li>Styling an element when a user mouse hover the element</li>
+<li>Styling A Tag for visited and unvisited links differently</li>
+<li>Styling an Elements when it gets focus</li>
+
+<strong>we start with the :hover must come after a:link then the a:visited but a:active must come after a:hover... there are case-sensive</strong>
+
+<div class="state">
+    <p><strong><a target="_blank" href="#">Home</a></strong></p>
+</div>
+
+<style>
+    /* unvisited link */
+    a:link
+    {
+        color: aqua;
+    }
+
+    /* visited link */
+    a:visited
+    {
+        color: yellowgreen;
+    }
+
+    a:hover
+    {
+        color: red;
+    }
+
+    a:active
+    {
+        color: blue;
+    }
+
+    /* a:hover MUST come after a:link and a:vistsed while a:active MUST come after a:hover  */
+
+</style>
+
+<h3>Other Pseudo-class</h3>
+<ol>
+
+    <li>:first-child which matches a specified element that is the first-child of another element</li>
+    
+    <li>:disabled is used in input:disabled which selects every disabled input-element</li>
+    
+    <li>:enabled is used in input:enabled which selects every enabled input-element</li>
+
+    <li>:checked is used in input:checked which selects every checked input-element</li>
+
+    <li>:empty used when a p:empty which selects all < p > elements that has no children</li>
+
+    <li>:first-of-type is used in p:first-of-type which selects all P-element that is first P-element of it's parents</li>
+
+    <li>:root selects the documents' root element</li>
+</ol>
+
+<h3>Pseudo-element (::)</h3>
+<p>is used to style specified part of an element which is Styling the first letter, or line of an element</p>
+<p>Insert content before, or after, the content of an element </p>
+
+<div class="Pseudo-element">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias rem animi voluptatum illo quos cupiditate vitae, nisi cum doloremque voluptatem culpa soluta obcaecati, ex dolorem voluptates blanditiis unde incidunt fugit.</p>
+</div>
+
+<style>
+    .Pseudo-element
+    {
+        width: 80%;
+    }
+    .Pseudo-element p::first-line
+    {
+        color: red;
+    }
+</style>
+
+<h4>::first-letter this can only applied to block-level elements </h4>
+
+<h4>::before or ::after which inserts contents before or after the content of an elements</h4>
+
+<style>
+    h4::before
+    {
+        content: url(./images/p5.jpg);
+    }
+</style>
+
+<h3>Css [attribute] Selector</h3>
+<p>is used to select elements with a specified attribute</p>
+
+<a href="" title="about">About</a>
+<a href="">About</a>
+<a href="" title="blog" target="_self">About</a>
+<input type="text" name="" id="">
+<p class="attr"></p>
+<style>
+    a[title~=blog]
+    {
+        color: aqua;
+    }
+
+    a[target=_self]
+    {
+        background-color: red;
+    }
+
+    input[type="text"]
+    {
+        width: 100%;
+    }
+    [class|=attr]
+    {
+        border: 1px solid red;
+    }
+</style>
+</body>
+</html>

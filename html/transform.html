@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS||Transforms</title>
+    <link rel="stylesheet" href="/css/transform.css">
+</head>
+<body>
+    <h3>CSS||Transforms</h3>
+    <p>this allow you to move, rotate, scale, and skew elements</p>
+    <p>We have types: 2D and 3d tansformation</p>
+
+    <pre>2D transformation</pre>
+    <li>translate()</li>
+    <li>rotate()</li>
+    <li>scale(), scaleY(), scaleX()</li>
+    <li>skew(), skewY(), skewX()</li>
+    <li>matrix()</li>
+
+    <li>Translate: this method moves an elements from its current position to either X-axis and Y-axis</li>
+
+    <div class="translate">
+           <p class="box1">Translate</p>
+    </div>
+
+    <li>Rotate: is goes clockwise or counter-clockwise according to a given degree</li>
+
+    <div>
+        <p class="rotate">Rotate</p>
+    </div>
+
+    <li>Scale() method increases or descreases the size of the element accoording to a given value i.e width and height</li>
+    <div>
+        <p class="box sc"> Scale</p>
+        <p class="box scY"> ScaleY</p>
+        <p class="box scX"> ScaleX</p>
+    </div>
+
+    <style>
+        .box
+        {
+          margin: 10px 10%;
+          background-color: #ccc;
+          padding: 10px;
+        }
+        .sc:hover
+        {
+           border: 2px dotted tomato;
+           transform: scale(2, 3);
+           width: 100px;
+           text-align: center;
+           font-size: xx-large;
+
+        }
+        .scY:hover
+        {
+        border: 2px dotted tomato;
+           transform: scaleY(2);
+           width: 100px;
+           text-align: center;
+           font-size: xx-large;
+        }
+        .scX:hover
+        {
+        border: 2px dotted tomato;
+           transform: scaleX(2);
+           width: 100px;
+           text-align: center;
+           font-size: xx-large;
+        }
+    </style>
+
+    <li>skew() method this skew an element along accordint to the given angle</li>
+
+    <div>
+        <p class="box sk">Skew</p>
+        <p class="box skY">SkewY</p>
+        <p class="box skX">SkewX</p>
+    </div>
+
+    <style>
+        .sk:hover
+        {
+            transform: skew(20deg, 10deg);
+        }
+        .skY:hover
+        {
+            transform: skewY(20deg);
+        }
+        .skX:hover
+        {
+            transform: skewX(20deg);
+        }
+    </style>
+    <li>Matrix() method: it combines all the 2D trnsform methods into one</li>
+    <p>using the parameter as follows: matrix(scaleX(), skewY(), skewX(),scaleY,translateX(),translateY())</p>
+
+    <div>
+        <p style="margin-top: 50px" class="box m1">Matrix</p>
+    </div>
+    <div>
+        <p style="margin-top: 50px" class="box m2">Matrix</p>
+    </div>
+    <div>
+        <p style="margin-top: 50px" class="box m3">Matrix</p>
+    </div>
+    <style>
+        .m1:hover
+        {
+            transform: matrix(1, -0.3, 0, 1, 0, 0);
+        }
+    </style>
+
+    <h3>3D Transform</h3>
+    <p>this take rotate with XYZ cordinate according to given degree</p>
+
+    <div>
+        <p class="box X">3D Rotate</p>
+        <p class="box Y">3D Rotate</p>
+        <p class="box Z">3D Rotate</p>
+    </div>
+
+    <style>
+        .X:hover
+        {
+            transform: rotateX(150deg);
+        }
+        .Y:hover
+        {
+            transform: rotateY(150deg);
+        }
+        .Z:hover
+        {
+            transform: rotateZ(90deg);
+        }
+    </style>
+
+    <h3>Transitions</h3>
+
+    <p>Transition properties:</p>
+    <li>Transition</li>
+    <li>Transition-delay</li>
+    <li>Transition-duration</li>
+    <li>Transition-property</li>
+    <li>Transition-timing-function</li>
+
+    <p>Transition: is a shorthand property for setting the four transition properties into single property</p>
+
+    <p>Transition-delay: this specifies a delay (in second) for the transition effect</p>
+
+    <p>Transition-duration: specifies how many seconds or milliseconds a transition effects takes to complete</p>
+
+    <p>Transition-property: specifies the name of the CSS property the transition effect is for</p>
+
+    <p>helps to add effect with also time duration</p>
+    <p>Transition Time functions: specifies the speed curve of the transition effect</p>
+    <p>Transition-timing-function property:</p>
+    <li>ease: specifies a transition effect with a slow start, then fast, then end slowly (this is default)</li>
+
+    <li>linear: specifies a transition effect with a same speed from start to end</li>
+
+    <li>ease-in: specifies a transition effect with a slow start</li>
+    <li>ease-out: specifies a transition effect with a slow end</li>
+    
+    <li>ease-in-out: specifies a transition effect with a slow start and end</li>
+
+    <div class="Transition">
+          <p class="boxT t1">100%</p>
+          <p class="boxT t2"></p>
+          <p class="boxT t3"></p>
+          <p class="boxT t4"></p>
+          <p class="boxT t5"></p>
+    </div>
+
+    <style>
+        .Transition
+        {
+            margin: 10px 10%;
+
+        }
+
+        .boxT
+        {
+            width: 100px;
+            height: auto;
+            background: #ccc;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 500px;
+
+        }
+
+        .t1
+        {
+            transition: width;
+            background-color: #000;
+            margin: 10px;
+            color: #fff;
+            padding: 15px;
+
+        }
+        .t1:hover
+        {
+            background: green;
+            width: 300px;
+            border-radius: 15px;
+            transition: width 2s;
+
+        }
+
+        .t2
+        {
+            transition: width 2s, height 5s;
+            background-color: #000;
+            margin: 10px;
+            color: #fff;
+            padding: 15px;
+
+        }
+
+        .t2:hover
+        {
+            width: 300px;
+            height: 300px;
+            border-radius: 15px;
+        }
+
+        .t3
+        {
+            transition: width 2s, height 5s;
+            transition-timing-function: ease-in-out;
+            background-color: #000;
+            margin: 10px;
+            color: #fff;
+            padding: 15px;
+        }
+
+        .t3:hover
+        {
+            width: 300px;
+            height: 300px;
+            border-radius: 15px;
+        }
+
+        .t4
+        {
+            transition: width 2s, height 5s, transform 2s;
+            transition-timing-function: ease-in-out;
+            background-color: #000;
+            margin: 10px;
+            color: #fff;
+            padding: 15px;
+        }
+
+        .t4:hover
+        {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            transform: rotate(180deg);
+        }
+
+        .t5
+        {
+            width: 10px;
+            height: 8px;
+            background: tomato;
+            transition-property: width;
+            transition-duration: 3s;
+            transition-timing-function: linear;
+            transition-delay: 1s;
+            border-radius: 15px;
+        }
+
+        .t5:hover
+        {
+            width: 100%;
+        }
+
+    </style>
+
+    <h3>CSS ANIMATIONS</h3>
+    <P>An ainmation lets an element gradually change from one style to another</P>
+
+    <p>Animation Property</p>
+    <li>@keyframes: specifies the animation code</li>
+    <li>animation: this is a shorthand property for setting all the animation property</li>
+    <li>animation-delay:</li>
+    <li>animation-direction: we also have reverser direction i.e forwards, backwards or in alternate cycles</li>
+    <li>animation-duration</li>
+    <li>animation-fill-mode: specifies a styly for the element when the animation is not playing(before it staarts, after it ends, or both)</li>
+    <li>animation-iteration-count: specifies a number of times an animation should play</li>
+    <li>animation-name: specifies the name of the @keyframes animation</li>
+    <li>animation-play-state: specifies whether the animation is running or paused</li>
+    <li>animtion-timing-function</li>
+
+    <div class="boxA animi"> </div>
+
+    <style>
+        .boxA
+        {
+            margin: 20px 10% 500px 10%;
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            animation-name: animi;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes animi {
+            from{background: green;}
+            to{background-color: yellow;}
+            
+        }
+    </style>
+
+</body>
+</html>

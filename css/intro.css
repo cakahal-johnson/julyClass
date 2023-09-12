@@ -1,0 +1,70 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.border
+{
+    border: 2px dashed greenyellow;
+    padding: 10px;
+}
+
+.borderTop
+{
+    border-top: 2px solid black;
+    margin: 10px;
+     padding: 10px;
+}
+
+.borderRight
+{
+    border-right: 5px solid tomato;
+    margin: 10px;
+ padding: 10px;
+}
+.borderLeft
+{
+    border-left: 2px solid green;
+    margin: 10px;
+ padding: 10px;
+}
+.borderBottom
+{
+    border-bottom: 2px solid blue;
+    margin: 10px;
+ padding: 10px;
+}
+
+.model
+{
+    border: 2px solid violet;
+    margin: 50px 10%; 
+    /* 50px is for TOP n Bottom while 10% Left n Right */
+     /* margin: 30px 60px 100px 12px; */
+     /* top right bottom left */
+
+}
+
+.margin, .padding, .content, .border2
+{
+    border: 2px solid red;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    
+}
+
+body{
+    background-color: #ccc;
+}
+
+/* 
+List out 20 each the color Type with examples:
+
+*/
+
+
+
+

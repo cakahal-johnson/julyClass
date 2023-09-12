@@ -1,0 +1,146 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    padding: 10px;
+    background: #f4f4f4;
+}
+
+.header
+{
+    padding: 30px;
+    text-align: center;
+    background: #ddd;
+}
+
+.header p
+{
+    letter-spacing: 15px;
+
+}
+
+.header h1
+{
+    font-size: 50px;
+}
+
+.header span
+{
+    color: tomato;
+    font-size: 70px;
+}
+
+.topnav
+{
+    float: left;
+    width: 100%;
+    display: block;
+    background: #333;
+
+}
+
+.topnav a
+{
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topnav a:hover
+{
+    background-color: #ddd;
+    color: #000;
+}
+
+.leftColumn
+{
+    float: left;
+    width: 75%;
+
+}
+
+.rightColumn
+{
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+}
+
+.row:after
+{
+    content: "";
+    display: table;
+    clear: both;
+
+}
+
+.card
+{
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.Fimg
+{
+    background: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+footer
+{
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+/* Responsive Intro */
+/* for tablet view */
+@media screen and (max-width: 800px) {
+    /* *
+    {
+        background: #000;
+        color: #fff;
+    } */
+
+    .leftColumn, .rightColumn
+    {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* for Phone View */
+@media screen and (max-width: 400px) {
+    .topnav a
+    {
+        float: none;
+        width: 100%;
+        display: none;
+    }
+
+    .leftColumn .rightColumn
+    {
+        width: 100%;
+        padding: 0;
+        float: none;
+    }
+
+    .header p
+    {
+        letter-spacing: normal;
+    }
+    
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox||Module</title>
+</head>
+<body>
+    <h3>FlexBox||Module</h3>
+    <p>Layout Models</p>
+    <ol>
+        <li>we used Block for web selections in a webpage</li>
+        <li>Inline is Text</li>
+        <li>Table is for Two-dimensional table data</li>
+        <li>Positioned and column gaps, is used explicit position of an element </li>
+        <li>FlexBox which helps in responsive layout without using float or positioning</li>
+        <li>Grid</li>
+    </ol>
+
+    <h3>To use Flex: the Child element(items) directs child the elements of a flex container automatically becomes flexble items</h3>
+
+    <h3>Flex has Properties like:</h3>
+    <li>Order</li>
+    <li>Flex-grow</li>
+    <li>Flex-shrink</li>
+    <li>Flex-basics</li>
+    <li>Flex</li>
+    <li>align-self</li> <br>
+
+    <div class="container">
+        <div class="div">number 0</div>
+        <div class="div">number 1</div>
+        <div class="div">number 2</div>
+        <div class="div">number 3</div>
+        <div class="div">number 4</div> 
+    </div>
+
+    <hr>
+
+    <style>
+        *
+        {
+           padding: 0;
+           margin: 0;
+           box-sizing: border-box;
+        }
+
+        body{margin: 0 10%;}
+
+        .div
+        {
+          height: 80px;
+          box-shadow: 2px 4px 6px #ccc;
+          padding: 20px;
+          align-items: center;
+          text-align: center;
+          
+        }
+
+        .container
+        {
+            display: flex;
+            /* flex-direction: column; */
+            flex-direction: row;
+            width: 100%;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+    </style>
+     <hr>
+    <h3>Here is the Flex Order</h3>
+
+
+ <div class="container">
+        <div class="div" style="order: 3;">number 0</div>
+        <div class="div" style="order: 2">number 1</div>
+        <div class="div"  style="order:4">number 2</div>
+        <div class="div" style="order: 0">number 3</div>
+        <div class="div" style="order:1">number 4</div> <br> <hr>
+    </div>
+
+    <hr>
+    <h3>here is the Flex-grow</h3>
+    <div class="container">
+        <div class="div" style="flex-grow: 1">number 0</div>
+        <div class="div" style="flex-grow: 8;">number 1</div>
+        <div class="div" style="flex-shrink: 0;">number 2</div>
+    </div>
+
+    <hr>
+    <h3>here is the Flex-grow, Shrink and Basis</h3>
+    <div class="container">
+        <div class="div" style="flex-grow: 1">number 0</div>
+        <div class="div" style="flex-grow: 8;">number 1</div>
+        <div class="div" style="flex-basis: 300px;">number 2</div>
+    </div>
+
+    <hr>
+    <h3>Shorthand way of flexing: it's property goes with flew-grow, flex-shrink and flex-basis </h3>
+    <div class="container">
+        <div class="div">Number 1</div>
+        <div class="div">Number 2</div>
+        <div class="div" style="flex: 0 0 200px">Number 3</div>
+        <div class="div">Number 4</div>
+    </div>
+    <p>this makes the Number 3 flex item not (not growable(0), not shrinkable(0) and with an initial 
+        lenght of 200pixels )</p> <br>
+    
+        <hr>
+        <h3>Align-self Property: is an alignment for the selected item inside the flexiable container,
+             this align-self property overrides the default alignment set by container's align-items property</h3>
+
+    <div class="container">
+        <div class="div" style="align-self: flex-start;">box 1</div>
+        <div class="div" style="align-self: flex-center;">box 2</div>
+        <div class="div" style="align-self: flex-end;">box 3</div>
+        <div class="div">box 4</div>
+    </div>
+
+    <div style="margin-top: 400px;"></div>
+
+    <div class="container-1">
+        <div class="box-1">
+            <h3>Box 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium labore earum, distinctio
+                 et suscipit nulla esse adipisci sint eaque vero quasi natus magni, nesciunt aut reprehenderit
+                  enim, at voluptatum! Officia?</p>
+        </div>
+        <div class="box-2">
+            <h3>Box 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium labore earum, distinctio
+                 et suscipit nulla esse adipisci sint eaque vero quasi natus magni, nesciunt aut reprehenderit
+                  enim, at voluptatum! Officia?</p>
+        </div>
+        <div class="box-3">
+            <h3>Box 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium labore earum, distinctio
+                 et suscipit nulla esse adipisci sint eaque vero quasi natus magni, nesciunt aut reprehenderit
+                  enim, at voluptatum! Officia?</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>

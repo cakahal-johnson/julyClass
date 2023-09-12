@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float||Layout</title>
+</head>
+<body>
+    <h3>Float CSS Property</h3>
+    <p>is used for positioning and formatting content...which how images and text can be floated in a container</p>
+
+    <ol>
+        <p>Float Values</p>
+        <li>left:</li>
+        <li>Right:</li>
+        <li>none:</li>
+        <li>inherit: here the Elements inherits the float value of the parent/li>
+    </ol>
+    <div class="clear2">
+
+        <p style="border: 2px solid yellowgreen;"><img class="img1" src="/images/p3.jpg"  width="100" height="100">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi id possimus minus quaerat distinctio, ducimus earum aliquid repudiandae! Explicabo reiciendis a, assumenda doloribus sunt autem laborum aliquid omnis consequatur porro?
+        </p>
+    </div>
+
+    <style>
+        .img1
+        {
+            float: left;
+            margin: 2px;
+
+        }
+        /* .clear2
+        {
+            overflow:auto;
+        }
+        */
+        .clear2 p
+        {
+            padding: 15px;
+        } 
+
+        .clear2::after
+        {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+
+    <div class="clear1">
+        <div class="img2"><img src="/images/p3.jpg"  width="100" height="100"></div>
+        <div class="para1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat quae veniam iste iure debitis quibusdam dignissimos et sed aliquam eaque magnam consequuntur perferendis, repudiandae voluptate eum mollitia fugit impedit! Quidem!</div>
+    </div>
+
+    <style>
+        .img2
+        {
+            border: 2px solid red;
+            float: left;
+        }
+
+        .para1
+        {
+            border: 2px solid green;
+            clear: left;
+        }
+    </style>
+
+    <div class="clear3">
+        <div class="box1 st">
+            <p>Lorem ipsum dolor,</p>
+        </div>
+        <div class="box2 st">
+            <p>Lorem ipsum dolor,</p>
+        </div>
+        <div class="box3 st">
+            <p>Lorem ipsum dolor,</p>
+        </div>
+    </div>
+
+    <style>
+        .st
+        {
+            background: #bbb;
+            padding: 20px;
+            width: 25%;
+            float: left;
+        }
+
+        .box2
+        {
+            background:#ccc ;
+            visibility: hidden;
+            /* display: none; */
+        }
+        .box3
+        {
+            background:#ddd ;
+        }
+
+        .clear3::after
+        {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+
+    </style>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML||Grid</title>
+</head>
+<body>
+    <h3>HTML||GRID</h3>
+    <p>Css grid Layout Module offers a grid-based layout system, with rows and columns, much easier to design web page without using floats and positioning...</p>
+
+    <h3>Grid ELEMENTS</h3>
+    <p>it consist of a <em>parent element</em> with one or more child elements</p>
+
+   <h3>Grid Properties</h3> 
+   <li>column-gap: </li>
+   <li>gap: </li>
+   <li>grid: this is the shorthand property for grid-template-rows, grid-template-columns, grid-template-areas, grid-auto-rows, columns and grid-auto-flow</li>
+
+   <div class="container">
+    <div class="grid__items1">1</div>
+    <div class="grid__items">2</div>
+    <div class="grid__items">3</div>
+    <div class="grid__items">4</div>
+    <div class="grid__items">5</div>
+    <div class="grid__items">6</div>
+    <div class="grid__items">7</div>
+    <div class="grid__items">8</div>
+    <div class="grid__items">9</div>
+   </div>
+
+   <style>
+    *
+    {
+       padding: 0;
+       margin: 0;
+       box-sizing: border-box;
+    }
+
+    .grid__items
+    {
+        border: 1px solid rgba(0,0,0,0.5);
+        background: rgba(225,255,225, 0.8);
+        font-size: 1em;
+        text-align: center;
+
+    }
+
+    .container
+    {
+        display: grid;
+        grid-template-columns:auto auto auto;
+        grid-gap: 50px;
+        margin: 0 10%;
+    }
+
+    .grid__items1
+    {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        background: red;
+    }
+
+   </style>
+
+ <strong>grid-template-area: these specifies how to display columns and rows, using named grid items</strong>
+<div class="example2">
+ <div class="container2">1</div>
+ <div class="container2">2</div>
+ <div class="container2">3</div>
+ <div class="container2">4</div>
+ <div class="container2">5</div>
+ <div class="container2">6</div>
+ <div class="container2">7</div>
+ <div class="container2 half">8</div>
+ <div class="container2">9</div>
+ <div class="container2">10</div>
+ <div class="container2">11</div>
+ <div class="container2">12</div>
+ <div class="container2">13</div>
+ <div class="container2">14</div>
+ <div class="container2">15</div>
+</div>
+
+<style>
+    .example2
+    {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto;
+        grid-gap: 15px;
+        background: green;
+        padding: 12px;
+        margin: 20px 10%;
+
+    }
+
+    .container2
+    {
+        background: red;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 2em;
+    }
+    .half
+    {
+        grid-area: 1 / 2 / 5 / 6;
+        /* the .half says i will start on row-line 1 and column-2, and end on row-line 5, column-line 6 */
+        /* Determine a grid item's size and location within the grid by contributing a line, a span, or nothing (automatic) to its grid placement. Shorthand for 'grid-row-start', 'grid-column-start', 'grid-row-end', and 'grid-column-end'. */
+
+        /* grid-row-start / grid-column-start / grid-row-end / grid-column-end /  */
+    }
+</style>
+
+<h3>using a Naming Reference</h3>
+<div class="container4">
+    <div class="head g">Header</div>
+    <div class="aside g">Aside</div>
+    <div class="main g">Main</div>
+    <div class="ads g">advrt</div>
+    <div class="footer g">footer</div>
+</div>
+
+<style>
+
+    /* general style */
+    *
+    {
+        box-sizing: border-box;
+    }
+    .g
+    {
+        background: green;
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+    }
+
+    .main
+    {
+        height: 400px;
+    }
+
+    /* naming reference */
+    .head
+    {
+      grid-area: header;
+    }
+    .aside
+    {
+      grid-area: aside;
+      margin-top: 2px;
+    }
+    .main
+    {
+      grid-area: main;
+    }
+    .ads
+    {
+      grid-area: ads;
+    }
+    .footer
+    {
+      grid-area: footer;
+    }
+
+    .container4
+    {
+        display: grid;
+        grid-template-areas: 'header header header header header header'
+        'aside main main main main ads'
+        'aside footer footer footer footer footer'
+        ;
+        /* Specifies named grid areas, which are not associated with any particular grid item, but can be referenced from the grid-placement properties. */
+        grid-gap: 10px;
+        background: red;
+        padding: 10px;
+
+    }
+
+    
+</style>
+</body>
+</html>

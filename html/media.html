@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML MEDIA</title>
+</head>
+<body>
+    <h3>Media</h3>
+    <p>To use media we need tags and attributes, we need to work with file paths, also its best keep our media in a folder</p>
+
+    <h3>Media Rules</h3>
+    <li>if the image has a white-space the image will be broken where white space means space or gaps between word-to-word </li>
+    <li>some srcset do not need the first / slash key</li>
+    <li>image must have an image type extension</li>
+    <li>we use the attributes to modify the image</li>
+
+    <img src="/images/p3.jpg" title="beer" alt="beer">
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <a href="/tableAssignment.html">
+        <img src="/images/p3.jpg" width="300" height="auto" title="beer with link" alt="beer">
+    </a>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <p>Having tow images in slot</p>
+    <picture>
+        <source media="(min-width: 650px)" title="image-one" srcset="/images/p5.jpg">
+        <source media="(min-width: 465px)" title="image-two" srcset="/images/p7.jpg">
+
+        <img src="/images/map.jpg" alt="map" title="map">
+    </picture>
+
+     <h2>ASSIGNMENT</h2>
+     <p>where we have more than one link in an image</p>    
+
+     <video src=""></video>
+     <p>attributes: controls autoplay loop the src connection is same with the image </p>
+     <audio src=""></audio>
+
+     <h3>HTML IFRAME</h3>
+     <P>JUST LIKE THE NAME FRAME THEN IT HOLD A SECTION IN A FRAME using iframe tag</P>
+     <P>attributes: src, name, width , height, frameborder...</P>
+     <p>name: this name attributes is use to call up a target to display in the Iframe</p>
+
+     <iframe src="images/map.jpg" name="my_view" frameborder="0">
+   
+     </iframe> <br><hr>
+     
+     <button>
+        <a href="/tableAssignment.html" target="my_view">Table Assignment</a>
+     </button>
+     <button>
+        <a href="/table.html" target="my_view">Table Class</a>
+     </button>
+     <button>
+        <a href="/index.html" target="my_view">Index Channel</a>
+     </button>
+
+
+
+</body>
+</html>

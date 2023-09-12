@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript||Intro</title>
+    <script defer></script>
+    <!-- Scripts with the defer attribute will prevent the DOMContentLoaded event from firing until the script has loaded and finished evaluating.
+
+This attribute must not be used if the src attribute is absent (i.e. for inline scripts), in this case it would have no effect. -->
+</head>
+<body>
+    <h3>Javascript||Intro</h3>
+    <p>Js is the world's most popular programming language but still a script file</p>
+
+    <h3>How to link a Javascript</h3>
+    <p>internal and external </p>
+
+    <h3>Javascript comment</h3>
+    <p>still using ctrl / but the sign is // content here </p>
+
+    <h3 id="sam">How to Display Javascript</h3>
+    <li>To write into an HTML Element, we use a method called innerHTML()</li>
+
+    <li>To write an HTML Output to display in browser we use a method called document.write()</li>
+    
+    <li>To output Message, we use window.alert() </li>
+
+    <li>To debugging a Javascript, in the browser we use console.log() </li>
+    <!-- javascript section -->
+    <h3>Sections: covers - window os, document dom, browser bom </h3>
+
+    <button onclick="document.getElementById('sam').innerHTML = 'My first class with Javascript'">Click me...</button>
+
+    <button onclick="document.getElementById('sam').style.color = 'red'">Color me...</button>
+
+    <script src="intro.js"></script>
+    <!-- below code is what is inside the above link -->
+    <script>
+        // single line comment
+
+/*
+ * multiline comment
+    
+ * 
+ * 
+ *
+ */
+
+/* content here */
+
+window.alert("Welcome To Js class")
+
+alert(4 * 4) // Operand
+
+alert("4 * 5") // String Value 
+
+console.log("Javascript is awesome!!")
+
+document.getElementById('sam').innerHTML = "Javascript is awesome!!!"
+    </script>
+    <script >
+        alert("Internal Script")
+    </script>
+    <!-- SRC This attribute specifies the URI of an external script; this can be used as an alternative to embedding a script directly within a document. -->
+
+</body>
+</html>

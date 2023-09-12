@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS||icon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.css">
+    <!-- <link rel="stylesheet" href="/font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css"> -->
+</head>
+<body>
+    <h3>Css||icon</h3>
+    
+    <p>This is offline </p>
+    <i class="fa fa-2x fa-home"></i>home
+
+    <p>This is online </p>
+    <i class="fas fa-2x fa-home"></i>home
+
+    <p>offline car</p>
+    <i class="fa fa-car fa-2x"></i>
+
+    <p>Icon Refresh</p>
+    <i class="fa fa-spinner fa-3x fa-spin fa-fw"></i> Loading....
+   
+    <p>Icon Rotate</p>
+    <i class="fa fa-gear fa-3x fa-spin fa-fw"></i> Loading....
+
+    <p>Icon shake</p>
+    <i class="fa fa-mobile fa-shake fa-3x fa-fw"></i> Ringing....
+
+    <p>Icon Bounce</p>
+    <i class="fa fa-soccer-ball-o fa-bounce fa-3x fa-fw"></i> is a Goal!!!
+
+    <p>Icon Blink</p>
+    <i class="fa fa-car fa-3x fa-blink blink"></i>
+
+    <Style>
+        .blink
+        {
+            animation: flash 2s steps(5,start) infinite;
+        }
+
+        @keyframes flash {
+            to{
+                visibility: hidden;
+            }
+        }
+    </Style>
+
+    <h3>Border-Radius Property</h3>
+    <div class="container">
+        <p class="box1"></p>
+        <p class="box2"></p>
+        <p class="box3"></p>
+        <p class="box4"></p>
+        <p class="box5 egg"></p>
+        <p class="box6"></p>
+        <p class="box7"></p>
+    </div>
+
+
+    <style>
+        .box1
+        {
+            width: 200px;
+            height: 150px;
+            background-color: green;
+            border-radius: 15px 50px 30px 80px;
+        }
+        .box2
+        {
+            width: 200px;
+            height: 150px;
+            background-color: green;
+            border-radius: 15px 50px 30px;
+        }
+        .box3
+        {
+            width: 200px;
+            height: 150px;
+            background-color: green;
+            border-radius: 15px 50px;
+        }
+        .box4
+        {
+            width: 200px;
+            height: 150px;
+            background-color: green;
+            border-radius: 15px;
+        }
+
+        .egg
+        {
+            width: 130px;
+            height: 175px;
+            background-color: tan;
+            /* color: #fff; */
+            /* border: 2px solid #333; */
+            box-shadow: 2px 4px 8px tan ;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+
+        }
+
+        .box6
+        {
+            width: 0;
+            height: 0;
+            border-top: 60px solid #73ad21;
+            border-right: 60px solid transparent;
+            border-bottom: 60px solid #73ad21;
+            border-left: 60px solid #73ad21;
+            border-top-left-radius: 60px;
+            border-top-right-radius: 60px;
+            border-bottom-left-radius: 60px;
+            border-bottom-right-radius: 60px;
+
+
+
+        }
+    </style>
+
+
+
+
+
+
+</body>
+</html>

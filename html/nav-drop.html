@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav-drop</title>
+</head>
+<body>
+    <h3>Nav-drop</h3>
+    <div class="nav-drop">
+        <span>Welcome</span>
+        <div class="nav-content">
+            <p>Lorem ipsum</p>
+        </div>
+    </div>
+
+    <style>
+        .nav-drop
+        {
+            position: relative;
+            display: inline-block;
+        }
+
+        .nav-content
+        {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            background-color: #ccc;
+            padding: 12px 16px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+            min-width: 100px;
+
+        }
+
+        .nav-drop:hover .nav-content
+        {
+            display: block;
+        }
+    </style>
+
+    <!-- here starts the image drop down -->
+    
+    <h3 style="margin-top: 100px;">Dropdown Image</h3>
+    <div class="img-drop">
+        <img src="/images/p3.jpg" alt="image" width="100" height="auto">
+        <div class="img-drop-content">
+            <img src="/images/p3.jpg" alt="image" width="300" height="auto">
+            <div class="caps">
+                <caption>We love animals</caption>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .img-drop
+        {
+            position: relative;
+            display: inline-block;
+        }
+
+        .img-drop-content
+        {
+            position: absolute;
+            z-index: 1;
+            background-color: #ccc;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3); 
+            border-radius: 15px; 
+            display: none;  
+        
+        }
+
+        .caps
+        {
+            padding: 15px;
+            border-left: 2px solid tomato;
+        }
+
+        .img-drop:hover .img-drop-content
+        {
+            display: block;
+            transition: 1s ease-in-out;
+        }
+    </style>
+    
+    <!-- here ends the image drop down -->
+    <div style="margin-top: 300px;"></div>
+    <h3>Image effects</h3>
+    <div class="container">
+        <img class="img" src="/images/p3.jpg" alt="">
+        <div class="back-image">
+            <div class="back">
+                <p>Contact Us!</p>
+                <label>+2347062119521</label>
+            </div>
+        </div>
+
+    </div>
+    <style>
+
+        .container
+        {
+            position: relative;
+            width: 50%;
+
+        }
+
+        .img
+        {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .back-image
+        {
+            position: absolute;
+            background-color: tomato;
+            overflow: hidden;
+            transition: .5s ease;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 0;
+            width: 100%;
+        }
+
+        .container:hover .back-image
+        {
+            height: 100%;
+        }
+
+        .back
+        {
+            white-space: nowrap;
+            color: #fff;
+            position: absolute;
+            overflow: hidden;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* .img:hover
+        {
+            /* opacity: 0.5; */
+            /* filter: blur(4px); */
+            /* filter: grayscale(100%); */
+            /* filter: brightness(250%); */
+            /* filter:hue-rotate(180deg); */
+            /* filter: contrast(180%); */
+            /* filter: opacity(50%); */
+            /* filter: invert(100%); */
+            /* filter: saturate(7); */
+            /* filter: sepia(100%); */
+            /* filter: drop-shadow(8px 8px 10px tomato); 
+
+
+        } */
+
+    </style>
+
+
+
+</body>
+</html>
