@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS||Object</title>
+</head>
+<body>
+    <h3>Javascript Object as an Array</h3>
+    <p>Object Arrays is used to store multiple values in a single variables</p>
+    <p>Object has keys and values which we use to access them</p>
+
+    <h3 id="loop"></h3>
+    <h1 style="color: red;" id="z"></h1>
+
+    <script>
+        // syntax dataVar name = ['content', 'content']
+        //Normal Assigning
+        var car = ["Benz", "Lexus", "Ford", "Opel", "Benz", "Lexus", "Ford", "Zenza"];
+        //The first index of an Array is Zero (0)
+
+        console.log(car);
+
+        //Object assigning which uses the key-word called "new" and Array()
+
+        var cars = new Array("Benz", "Lexus", "Ford", "Opel");
+        console.log(cars);
+
+        // method for checking any dataType
+        console.log(typeof(cars));
+
+        // classwork how to access only "Ford" in the Array
+        // reassign 
+        let anything = cars[2];
+        console.log(anything)
+
+        // change Opel to Keke
+        cars[3] = "keke";
+        // console.log(opel);
+        console.log(cars)
+
+        // Arrays can stores both Strings and numbers
+        var users = ["John", "example@gmail.com", 12345];
+        console.log(users);
+        // accessing without reassigning
+        console.log(users[1]);
+
+        //Object Values Json formaters which used mainly as database or Api which has keys and values
+        let user = {
+           UserName: "Cakahal",
+           Email: "example@gmail.com",
+           password: 12345
+        }
+
+        console.log(user)
+        console.log(typeof(user))
+
+        // how to check the length
+        let anyVar = car.length;
+        console.log(anyVar)
+
+        // classwork access the Email in user Object Array
+
+        // Accessing the Last item in an Array
+        var x = car[car.length -1]
+        //Gets or sets the length of the array. This is a number one higher than the highest index in the array.
+        console.log(x)
+
+        //Looping Array To display content
+        var students, text, flen, i // Multiple variables
+
+        // reassigning variables without the VarType
+        students = ["Johnson", "Obi", "Peter", "Joy", "Johnson", "Obi", "Peter", "Joy"];
+
+        flen = students.length;
+
+        text = "<ol>";
+            for(i = 0; i < flen; i++){
+                text += "<li>" + students[i] + "</li>";
+            }
+        text += "</ol>";
+
+        // let's pure the above function into the H3 in the HTML display
+        document.getElementById('loop').innerHTML = text;
+        document.getElementById('z').innerHTML = students;
+
+
+
+
+
+
+    </script>
+</body>
+</html>
