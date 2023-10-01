@@ -13,6 +13,9 @@
     <h3 id="loop"></h3>
     <h1 style="color: red;" id="z"></h1>
 
+    <h3 class="sortt">Here is your Result</h3>
+    <button onclick="sorT()">Show Result</button>
+
     <script>
         // syntax dataVar name = ['content', 'content']
         //Normal Assigning
@@ -85,7 +88,122 @@
         document.getElementById('z').innerHTML = students;
 
 
+//    Array methods
+    // adding without replacing an Array
+    //Appends new elements to the end of an array, and returns the new length of the array.
+    students.push("jane");
+    console.log(students)
 
+    /*Associative Arrays is called name-index
+    
+    this means where an array is supported with name indexes
+
+    Arrays with this name indexes are called hashes or associative Array
+
+    Js does not support but uses numbered indexes
+    
+    */
+
+    // starting Array with empty index
+    const list_of_stud = [];
+
+    console.log(list_of_stud.length) //empty
+
+    list_of_stud[0] = "cakahal";
+    list_of_stud[1] = 1234;
+    list_of_stud[2] = "johnson";
+
+    console.log(list_of_stud.length) //3
+
+    // when tying to use name index in Js, it will return undefine then it redefine the array to standard object. whereby some properties or methods will return incorrect results
+
+    /*
+    Arrays does not support the naming index
+    -- we can use objects when you want the elements to be to Strings
+    -- You should always use arrays when you want the element name to be number
+    
+    */
+
+    // Assigning using Array method as an Object with "new" keyword
+    let Names = new Array("john", 500, "peter", 100);
+    console.log(typeof(Names)) // Object
+
+    var NAMES = ["john", 500, "peter", 100];
+    console.log(typeof(NAMES)) // same
+
+    //checking an Array by using a Boolean 
+    let ar = Array.isArray(Names) 
+    let arr = Array.isArray(NAMES) 
+    console.log(ar) //
+    console.log(arr) //
+
+    //lets see what happens when accessing an Object
+    let Obj = []
+    Obj['Fname'] = "Cakahal";
+    Obj['lname'] = "Johnson";
+    Obj['age'] = 16;
+
+    console.log(Array.isArray(Obj));
+
+    //Arrays Methods() 
+    /*
+    -- toString() method: means converting an arrays to a string of (comma separated) the return values
+
+    join(): is used to join all arrays elements into a string then the join we use whatever sign we placed as params to separate them
+
+    pop() and push(): pop() is used to remove the last index of the Arrays while push() adds to the last index of the Arrays.
+
+    shift() and unshift: shift() is used to remove the first index of the Arrays while unshift() adds to the first index of the Arrays.
+
+    length(): means is way to append a new element to an Array
+
+    delete(): leaves undefine holds in the array
+
+    splicing(): is used to add a new items to an arrays
+
+    splice(): this removes without leaving a holes in the array and it takes two params which is start and ends
+
+    slice(): is used to slices out a piece of an array into new, but it does not remove any elements from the source array 
+
+    */
+
+    console.log(students.toString());
+    console.log(students.join(" $ "));
+
+    console.log(students.splice(1, 3,)) // it returns whatever in position of the Arrays
+
+    var checking = students.concat(Names, NAMES);
+    console.log(checking)
+
+    //Sorting Arrays
+    // sorting Alphabetically is always a case-sensitive
+    console.log(students)
+    let ass = students.push("Akahal")
+    let asss = students.unshift("zine")
+    let assss = students.unshift("akahal")
+    let asssso = students.unshift("AKAHAL")
+    console.log("This the new student array: ", assss)
+    console.log(students.sort());
+    console.log(students.reverse());
+
+    //sorting for numbers
+    let NUMs = [200, 0, 300, 400, 20];
+    console.log("initial numbers: ", NUMs)
+    console.log("Numbers when sorted: ",NUMs.sort())
+    console.log("Numbers in rev posi: ", NUMs.reverse())
+
+    // using Events to call up a methods
+    function sorT() {
+        NUMs.sort(function(a, b){
+            // return a - b; // means starts small nums and ends with bigger number
+            // return b - a; // means starts big nums and ends with small number
+            // where we want to sort just loto
+            return 0.5 - Math.random();
+        });
+
+        document.querySelector('.sortt').innerHTML = "Here is your Answer: "+ NUMs
+        
+    }
 
 
 
