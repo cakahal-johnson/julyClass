@@ -1,5 +1,7 @@
 /* css font importing */
-@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,200;0,300;0,500;0,600;1,400&family=Raleway:wght@200&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:ital,wght@0,200;0,300;0,500;0,600;1,400&family=Raleway:wght@200&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,200;1,300;1,400;1,500&display=swap');
 
 /* css variables */
 :root {
@@ -26,8 +28,9 @@
 
 body
 {
-    font-family: 'Raleway',  sans-serif;
-    font-weight: bold;
+    /* font-family: 'Raleway',  sans-serif; */
+    font-family: 'Noto',  serif;
+    font-weight: 100;
     background-color: var(--cakahal1);
 }
 
@@ -184,7 +187,8 @@ box-shadow: 3px 6px 8px 8px var(--cakahal3);
 .grid
 {
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+    grid-template-columns: auto auto auto auto auto;
 }
 
 
@@ -233,6 +237,7 @@ footer
 
 }
 
+
 @media screen and (max-width: 1000px) {
     main{
         float: left;
@@ -267,7 +272,6 @@ footer
     }
     
 }
-
 
 
 
